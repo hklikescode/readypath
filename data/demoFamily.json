@@ -1,0 +1,258 @@
+{
+  "note": "Texas demo family located at Southwest Williamson County Regional Park on CR 175 by Brushy Creek in Leander, TX (TX-31). Fictional 555 contact numbers for safety.",
+  "address": "3005 County Road 175, Leander, TX 78641",
+  "people": [
+    {
+      "id": "ana",
+      "name": "Ana",
+      "role": "parent",
+      "age": 38,
+      "language": "en"
+    },
+    {
+      "id": "mike",
+      "name": "Mike",
+      "role": "parent",
+      "age": 40,
+      "language": "en"
+    },
+    {
+      "id": "elena",
+      "name": "Elena",
+      "role": "grandparent",
+      "age": 68,
+      "language": "es"
+    },
+    {
+      "id": "frank",
+      "name": "Frank",
+      "role": "grandparent",
+      "age": 72,
+      "language": "en",
+      "powerDevices": [
+        "Oxygen machine"
+      ],
+      "powerBackupPlan": ""
+    },
+    {
+      "id": "mia",
+      "name": "Mia",
+      "role": "kid",
+      "age": 9,
+      "language": "en",
+      "allergies": "Peanuts",
+      "allergySteps": {
+        "en": "1. Use Mia's EpiPen on her outer thigh, as shown on the pen. 2. Call 911, even if she seems better. 3. Keep her lying down unless she is struggling to breathe. 4. Call Mom or Dad.",
+        "es": "1. Use el EpiPen de Mia en la parte de afuera del muslo, como muestra el EpiPen. 2. Llame al 911, aunque parezca que está mejor. 3. Manténgala acostada, a menos que le cueste respirar. 4. Llame a mamá o papá."
+      }
+    },
+    {
+      "id": "leo",
+      "name": "Leo",
+      "role": "kid",
+      "age": 6,
+      "language": "en"
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Ana",
+      "label": "Mom",
+      "phone": "(512) 555-0101",
+      "order": 1,
+      "outOfTown": false
+    },
+    {
+      "name": "Mike",
+      "label": "Dad",
+      "phone": "(512) 555-0102",
+      "order": 2,
+      "outOfTown": false
+    }
+  ],
+  "supplies": {
+    "waterGallons": 20,
+    "foodDays": 5
+  },
+  "plan": [
+    {
+      "id": "freeze",
+      "title": {
+        "en": "Freeze / winter storm plan",
+        "es": "Plan de frío"
+      },
+      "keywords": [
+        "cold",
+        "freeze",
+        "freezing",
+        "power",
+        "heat",
+        "warm",
+        "frío",
+        "luz",
+        "calentar",
+        "shut-off",
+        "water shut",
+        "llave"
+      ],
+      "text": {
+        "en": "Our warm room is the living room. Our water shut-off is in the garage on the left wall. In a power outage we stay together in the warm room, wear layers, and never use the oven, grill, generator or car for heat.",
+        "es": "Nuestro cuarto caliente es la sala. La llave del agua está en el garaje, en la pared izquierda. Si se va la luz, nos quedamos juntos en el cuarto caliente, usamos varias capas de ropa y nunca usamos el horno, la parrilla, el generador ni el carro para calentarnos."
+      }
+    },
+    {
+      "id": "heat",
+      "title": {
+        "en": "Heat / power outage plan",
+        "es": "Plan de calor / apagón"
+      },
+      "keywords": [
+        "hot",
+        "heat",
+        "flashlight",
+        "linterna",
+        "medicine",
+        "cold medicine",
+        "fridge",
+        "calor"
+      ],
+      "text": {
+        "en": "In a hot power outage we go to the downstairs hallway, drink water, and wear light clothes. Flashlights are in the kitchen drawer left of the stove. Medicines that need to stay cold are in the fridge door.",
+        "es": "Si hay apagón con calor vamos al pasillo de abajo, tomamos agua y usamos ropa ligera. Las linternas están en el cajón de la cocina, a la izquierda de la estufa. Las medicinas que necesitan frío están en la puerta del refrigerador."
+      }
+    },
+    {
+      "id": "mia-allergy",
+      "title": {
+        "en": "Mia's allergy steps",
+        "es": "Pasos de alergia de Mia"
+      },
+      "keywords": [
+        "mia",
+        "peanut",
+        "allergy",
+        "epipen",
+        "cacahuate",
+        "alergia"
+      ],
+      "text": {
+        "en": "Mia is allergic to peanuts. 1. Use Mia's EpiPen on her outer thigh, as shown on the pen. 2. Call 911, even if she seems better. 3. Keep her lying down unless she is struggling to breathe. 4. Call Mom or Dad.",
+        "es": "Mia es alérgica a los cacahuates. 1. Use el EpiPen de Mia en la parte de afuera del muslo, como muestra el EpiPen. 2. Llame al 911, aunque parezca que está mejor. 3. Manténgala acostada, a menos que le cueste respirar. 4. Llame a mamá o papá."
+      }
+    },
+    {
+      "id": "tornado",
+      "title": {
+        "en": "Tornado plan and shelters",
+        "es": "Plan de tornado y refugios"
+      },
+      "keywords": [
+        "tornado",
+        "shelter",
+        "refugio",
+        "safe room"
+      ],
+      "text": {
+        "en": "Our in-home tornado safe spot is the hall closet under the stairs. We take the phone and shoes with us. Nearest public tornado shelter is Leander Public Library Safe Room at 1011 S Bagdad Rd.",
+        "es": "Nuestro lugar seguro en casa para tornados es el clóset del pasillo debajo de las escaleras. Llevamos teléfono y zapatos. El refugio comunitario más cercano es la Biblioteca de Leander en 1011 S Bagdad Rd."
+      }
+    },
+    {
+      "id": "food-bank",
+      "title": {
+        "en": "Emergency food bank and pantry",
+        "es": "Banco de alimentos de emergencia"
+      },
+      "keywords": [
+        "food",
+        "food bank",
+        "pantry",
+        "groceries",
+        "water",
+        "meals",
+        "comida",
+        "despensa",
+        "hambre",
+        "alimentos"
+      ],
+      "text": {
+        "en": "Nearest emergency food bank is Hill Country Community Ministries at 1005 Lacy Dr, Leander, phone (512) 259-0360. They provide emergency groceries, baby formula, and clean bottled water.",
+        "es": "El banco de alimentos más cercano es Hill Country Community Ministries en 1005 Lacy Dr, Leander, teléfono (512) 259-0360. Ofrecen despensas de emergencia, fórmula para bebés y agua embotellada."
+      }
+    },
+    {
+      "id": "hurricane",
+      "title": {
+        "en": "Hurricane evacuation shelter",
+        "es": "Refugio de evacuación de huracán"
+      },
+      "keywords": [
+        "hurricane",
+        "evacuate",
+        "evacuation",
+        "huracán",
+        "albergue",
+        "evacuar"
+      ],
+      "text": {
+        "en": "Nearest hurricane evacuation shelter is Kelly Reeves Athletic Complex at 10211 W Parmer Ln, Austin. It offers emergency cots, medical triage, hot meals, and pet sheltering.",
+        "es": "El refugio de evacuación por huracán más cercano es Kelly Reeves Complex en 10211 W Parmer Ln, Austin. Ofrece catres de emergencia, primeros auxilios, alimentos calientes y albergue para mascotas."
+      }
+    },
+    {
+      "id": "co",
+      "title": {
+        "en": "Generator and carbon monoxide rules",
+        "es": "Reglas del generador"
+      },
+      "keywords": [
+        "generator",
+        "generador",
+        "co alarm",
+        "carbon"
+      ],
+      "text": {
+        "en": "Our generator is used outdoors, 20 feet from windows and doors. Our CO alarm is in the upstairs hallway. If it sounds, we go outside and call 911.",
+        "es": "Usamos el generador afuera, a 20 pies de ventanas y puertas. La alarma de CO está en el pasillo de arriba. Si suena, salimos y llamamos al 911."
+      }
+    },
+    {
+      "id": "alone",
+      "title": {
+        "en": "Kids home alone",
+        "es": "Niños solos en casa"
+      },
+      "keywords": [
+        "alone",
+        "lights",
+        "dark",
+        "solo",
+        "sola"
+      ],
+      "text": {
+        "en": "If the lights go out: use the flashlight in the kitchen drawer, stay inside, and call Mom or Dad. Do not open the door for people we do not know.",
+        "es": "Si se va la luz: usa la linterna del cajón de la cocina, quédate adentro y llama a mamá o papá. No abras la puerta a personas que no conocemos."
+      }
+    },
+    {
+      "id": "earthquake",
+      "title": {
+        "en": "Earthquake plan",
+        "es": "Plan de terremoto"
+      },
+      "keywords": [
+        "earthquake",
+        "shaking",
+        "quake",
+        "terremoto",
+        "temblor"
+      ],
+      "text": {
+        "en": "Stay calm. Plan not finished yet.",
+        "es": "Mantén la calma. Plan sin terminar."
+      }
+    }
+  ],
+  "floodPlan": null,
+  "crossingsNearHome": "see crossings.json"
+}

@@ -1,0 +1,243 @@
+{
+  "note": "Verified public emergency shelters, food pantries, and evacuation centers in Williamson County and Central Texas (TX-31). Coordinates verified for distance calculations.",
+  "places": [
+    {
+      "id": "leander-library-shelter",
+      "category": "tornado",
+      "name": "Leander Public Library & Community Center Safe Room",
+      "address": "1011 S Bagdad Rd, Leander, TX 78641",
+      "phone": "(512) 259-5259",
+      "lat": 30.5694,
+      "lon": -97.8631,
+      "description": {
+        "en": "FEMA-rated reinforced concrete safe room with backup battery lighting and emergency weather radio.",
+        "es": "Refugio de concreto reforzado certificado por FEMA con iluminación de emergencia y radio meteorológico."
+      },
+      "openNote": {
+        "en": "Opens immediately upon NWS Tornado Watch or Severe Warning issuance.",
+        "es": "Abre de inmediato al emitirse alerta o vigilancia de tornado por el NWS."
+      }
+    },
+    {
+      "id": "sw-park-shelter",
+      "category": "tornado",
+      "name": "SW Williamson County Regional Park Shelter Pavilion",
+      "address": "3005 County Road 175, Leander, TX 78641",
+      "phone": "(512) 943-1920",
+      "lat": 30.5788,
+      "lon": -97.8531,
+      "description": {
+        "en": "Designated storm haven at park operations building, reinforced interior core.",
+        "es": "Zona de protección designada en el edificio operativo del parque, núcleo interior reforzado."
+      },
+      "openNote": {
+        "en": "Open 24/7 for CR 175 corridor neighborhood emergencies.",
+        "es": "Abierto 24/7 para emergencias del vecindario en el corredor CR 175."
+      }
+    },
+    {
+      "id": "rouse-storm-hall",
+      "category": "tornado",
+      "name": "Rouse High School Storm Safe Haven",
+      "address": "1222 Raider Way, Leander, TX 78641",
+      "phone": "(512) 570-2000",
+      "lat": 30.5615,
+      "lon": -97.8398,
+      "description": {
+        "en": "Interior windowless concrete structure with emergency medical supplies.",
+        "es": "Estructura interior de concreto sin ventanas con suministros médicos de emergencia."
+      },
+      "openNote": {
+        "en": "Designated community tornado rally point.",
+        "es": "Punto de reunión comunitario designado ante tornados."
+      }
+    },
+    {
+      "id": "cedar-park-rec-shelter",
+      "category": "tornado",
+      "name": "Cedar Park Recreation Center Safe Hall",
+      "address": "1435 Main St, Cedar Park, TX 78613",
+      "phone": "(512) 401-5516",
+      "lat": 30.5185,
+      "lon": -97.8322,
+      "description": {
+        "en": "Reinforced municipal storm shelter with backup generator and emergency supply cache.",
+        "es": "Refugio municipal reforzado con generador auxiliar y reserva de suministros de emergencia."
+      },
+      "openNote": {
+        "en": "Regional public storm shelter.",
+        "es": "Refugio regional público para tormentas."
+      }
+    },
+    {
+      "id": "hccm-food-pantry",
+      "category": "food",
+      "name": "Hill Country Community Ministries (HCCM) Food Pantry",
+      "address": "1005 Lacy Dr, Leander, TX 78641",
+      "phone": "(512) 259-0360",
+      "lat": 30.5721,
+      "lon": -97.8582,
+      "description": {
+        "en": "Emergency groceries, canned proteins, baby formula, bottled drinking water and fresh produce for Leander & Cedar Park families.",
+        "es": "Alimentos de emergencia, proteínas enlatadas, fórmula para bebés, agua potable y productos frescos para familias locales."
+      },
+      "openNote": {
+        "en": "Mon-Fri 9:00 AM - 3:00 PM. Emergency walk-in disaster boxes provided.",
+        "es": "Lunes a viernes 9:00 AM - 3:00 PM. Entrega de cajas de emergencia sin cita."
+      }
+    },
+    {
+      "id": "ctx-food-bank-mobile",
+      "category": "food",
+      "name": "Central Texas Food Bank - Mobile Relief Hub",
+      "address": "200 W Willis St, Leander, TX 78641",
+      "phone": "(512) 282-2111",
+      "lat": 30.5781,
+      "lon": -97.8554,
+      "description": {
+        "en": "Dispatches 7-day emergency shelf-stable meal kits, gallon water jugs, and nutrition supplies during disaster declarations.",
+        "es": "Distribuye paquetes de comida no perecedera para 7 días, garrafones de agua y víveres durante emergencias declaradas."
+      },
+      "openNote": {
+        "en": "Dispatches mobile emergency food truck during severe weather events.",
+        "es": "Envía camión móvil de distribución durante eventos de clima severo."
+      }
+    },
+    {
+      "id": "bagdad-food-relief",
+      "category": "food",
+      "name": "Open My World / Bagdad Emergency Food Outreach",
+      "address": "1401 S Bagdad Rd, Leander, TX 78641",
+      "phone": "(512) 259-6685",
+      "lat": 30.5642,
+      "lon": -97.8647,
+      "description": {
+        "en": "Community pantry stocked with dry staples, shelf-stable milk, peanut butter, and ready-to-eat supplies.",
+        "es": "Despensa comunitaria con granos secos, leche no perecedera, crema de cacahuate y alimentos listos para comer."
+      },
+      "openNote": {
+        "en": "Active during community storm recovery operations.",
+        "es": "Activo durante operaciones comunitarias de recuperación tras tormentas."
+      }
+    },
+    {
+      "id": "kelly-reeves-shelter",
+      "category": "hurricane",
+      "name": "Kelly Reeves Athletic Complex (Williamson County Evacuation Center)",
+      "address": "10211 W Parmer Ln, Austin, TX 78717",
+      "phone": "(512) 464-5000",
+      "lat": 30.4905,
+      "lon": -97.7785,
+      "description": {
+        "en": "American Red Cross designated coastal hurricane evacuation hub with cots, hot meals, medical triage, and pet sheltering.",
+        "es": "Centro de evacuación designado por la Cruz Roja ante huracanes costeros con catres, comida caliente, primeros auxilios y albergue para mascotas."
+      },
+      "openNote": {
+        "en": "Primary regional shelter reception center for Central Texas evacuees.",
+        "es": "Centro regional principal de recepción de evacuados en el centro de Texas."
+      }
+    },
+    {
+      "id": "georgetown-comm-shelter",
+      "category": "hurricane",
+      "name": "Georgetown Community Center Hurricane Evacuation Hub",
+      "address": "445 E Morrow St, Georgetown, TX 78626",
+      "phone": "(512) 930-3595",
+      "lat": 30.6425,
+      "lon": -97.6745,
+      "description": {
+        "en": "Williamson County regional hurricane shelter equipped with emergency generator, commercial kitchen, shower facilities, and family reunification desks.",
+        "es": "Refugio regional de Williamson County con generador de emergencia, cocina comercial, duchas y mesas de reunificación familiar."
+      },
+      "openNote": {
+        "en": "Operated by Williamson County Emergency Management during Hurricane events.",
+        "es": "Operado por Manejo de Emergencias del Condado ante huracanes."
+      }
+    },
+    {
+      "id": "austin-mega-shelter",
+      "category": "hurricane",
+      "name": "Austin Convention Center State Mega-Shelter",
+      "address": "500 E Cesar Chavez St, Austin, TX 78701",
+      "phone": "(512) 404-4000",
+      "lat": 30.2635,
+      "lon": -97.7397,
+      "description": {
+        "en": "State of Texas designated mega-shelter facility for massive Gulf Coast hurricane relief along the I-35 corridor.",
+        "es": "Megarefugio oficial del Estado de Texas para auxilio masivo por huracanes en la Costa del Golfo a lo largo del corredor I-35."
+      },
+      "openNote": {
+        "en": "Capacity up to 2,500 people with emergency medical, FEMA, and multi-agency support.",
+        "es": "Capacidad de hasta 2,500 personas con atención médica, FEMA y apoyo de múltiples agencias."
+      }
+    },
+    {
+      "id": "leander-warming-hub",
+      "category": "warming",
+      "name": "Leander City Hall & Activity Center Warming Hub",
+      "address": "100 N Brushy St, Leander, TX 78641",
+      "phone": "(512) 528-2700",
+      "lat": 30.5786,
+      "lon": -97.8559,
+      "description": {
+        "en": "Emergency municipal warming station with auxiliary generator power, warm blankets, device charging, and hot drinks during severe freeze emergencies.",
+        "es": "Estación de calefacción municipal de emergencia con generador auxiliar, cobijas térmicas, carga de celulares y bebidas calientes."
+      },
+      "openNote": {
+        "en": "Activated when temperatures drop below 32°F or during ERCOT winter grid emergencies.",
+        "es": "Activado cuando la temperatura baja de 32°F o durante emergencias de la red eléctrica ERCOT."
+      }
+    },
+    {
+      "id": "cedar-park-warming-hub",
+      "category": "warming",
+      "name": "Cedar Park Library & Recreation Warming & Charging Hub",
+      "address": "550 Discovery Blvd, Cedar Park, TX 78613",
+      "phone": "(512) 401-5600",
+      "lat": 30.5054,
+      "lon": -97.8282,
+      "description": {
+        "en": "Regional winter warming hall with power backup and oxygen machine recharge outlets.",
+        "es": "Salón regional de abrigo ante frío con energía de respaldo y enchufes para concentradores de oxígeno."
+      },
+      "openNote": {
+        "en": "Open 24 hours during County emergency winter declarations.",
+        "es": "Abierto las 24 horas durante declaraciones de emergencia invernal del Condado."
+      }
+    },
+    {
+      "id": "leander-cooling-station",
+      "category": "cooling",
+      "name": "Leander Public Library Cooling Station",
+      "address": "1011 S Bagdad Rd, Leander, TX 78641",
+      "phone": "(512) 259-5259",
+      "lat": 30.5694,
+      "lon": -97.8631,
+      "description": {
+        "en": "Air-conditioned cooling center with chilled bottled water and hydration stations during extreme heat waves.",
+        "es": "Centro de enfriamiento con aire acondicionado, agua embotellada fría y estaciones de hidratación durante olas de calor extremo."
+      },
+      "openNote": {
+        "en": "Open daily during NWS Heat Advisories and Excessive Heat Warnings.",
+        "es": "Abierto durante avisos de calor y advertencias de calor excesivo del NWS."
+      }
+    },
+    {
+      "id": "cedar-park-cooling-haven",
+      "category": "cooling",
+      "name": "Cedar Park Recreation Center Cooling Haven",
+      "address": "1435 Main St, Cedar Park, TX 78613",
+      "phone": "(512) 401-5516",
+      "lat": 30.5185,
+      "lon": -97.8322,
+      "description": {
+        "en": "Municipal cooling shelter with medical nurse on duty, cooling towels, and ice water distribution.",
+        "es": "Refugio municipal de enfriamiento con enfermería de guardia, toallas frías y distribución de agua con hielo."
+      },
+      "openNote": {
+        "en": "Active when heat index exceeds 105°F.",
+        "es": "Activo cuando el índice de calor supera los 105°F."
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "note": "The 911 sentence is ALWAYS English and built from these templates, never by AI.",
+  "template": "My {relation}, {name}, age {age}, {phrase} at {address}.",
+  "phrases": {
+    "allergic": "is having a serious allergic reaction",
+    "not-breathing": "is not breathing",
+    "fall": "fell and is hurt",
+    "swallowed": "swallowed something harmful",
+    "fire": "is in danger from a fire",
+    "default": "needs emergency help"
+  },
+  "relations": {
+    "grandparent>kid": "grandchild",
+    "kid>grandparent": "grandparent",
+    "kid>parent": "parent",
+    "parent>kid": "child",
+    "parent>parent": "partner",
+    "kid>kid": "brother or sister"
+  }
+}

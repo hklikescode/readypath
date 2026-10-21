@@ -1,0 +1,77 @@
+{
+  "note": "Eight readiness checks. Plain-language descriptions; the logic is in lib/student/checklist.ts.",
+  "rules": [
+    {
+      "id": "power-backup",
+      "label": {
+        "en": "Every power device (like an oxygen machine) has a backup power plan",
+        "es": "Cada aparato médico eléctrico tiene un plan de energía de respaldo"
+      },
+      "check": "For each person with powerDevices, powerBackupPlan is not empty",
+      "fixScreen": "people"
+    },
+    {
+      "id": "allergy-steps",
+      "label": {
+        "en": "Everyone with an allergy has written emergency steps",
+        "es": "Cada persona con alergia tiene pasos de emergencia por escrito"
+      },
+      "check": "For each person with allergies, allergySteps is not empty",
+      "fixScreen": "people"
+    },
+    {
+      "id": "contacts-two",
+      "label": {
+        "en": "At least 2 emergency contacts saved",
+        "es": "Al menos 2 contactos de emergencia guardados"
+      },
+      "check": "contacts.length >= 2",
+      "fixScreen": "contacts"
+    },
+    {
+      "id": "contact-out-of-town",
+      "label": {
+        "en": "At least one out-of-town contact for regional disasters",
+        "es": "Al menos un contacto fuera de la ciudad para desastres regionales"
+      },
+      "check": "At least one contact has outOfTown === true",
+      "fixScreen": "contacts"
+    },
+    {
+      "id": "home-address",
+      "label": {
+        "en": "Home address is saved for 911 dispatch",
+        "es": "La dirección de la casa está guardada para los despachadores del 911"
+      },
+      "check": "address is not empty",
+      "fixScreen": "home"
+    },
+    {
+      "id": "water-supplies",
+      "label": {
+        "en": "Emergency water stored (1 gallon per person per day for 3 days)",
+        "es": "Agua de emergencia almacenada (1 galón por persona por día durante 3 días)"
+      },
+      "check": "supplies.waterGallons >= people.length * 3",
+      "fixScreen": "home"
+    },
+    {
+      "id": "flood-plan",
+      "label": {
+        "en": "Family flood safety and evacuation plan is written",
+        "es": "El plan familiar de inundación y evacuación está redactado"
+      },
+      "check": "floodPlan is not null and has text",
+      "fixScreen": "plan"
+    },
+    {
+      "id": "crossing-saved",
+      "label": {
+        "en": "At least one nearby low-water crossing saved (or marked 'none near us')",
+        "es": "Al menos un cruce de agua cercano guardado (o marcado 'no hay cruces')"
+      },
+      "check": "crossings.length >= 1 or noCrossingsNearMe === true",
+      "fixScreen": "crossings"
+    }
+  ]
+}

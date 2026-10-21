@@ -1,0 +1,187 @@
+{
+  "note": "Texas disaster safety rules: 13 danger triggers checked before AI ever runs. Written in English and Spanish.",
+  "rules": [
+    {
+      "id": "not-breathing",
+      "action": "call911",
+      "words": [
+        "not breathing",
+        "no respira",
+        "stopped breathing"
+      ],
+      "message": {
+        "en": "Call 911 immediately. Person is not breathing.",
+        "es": "Llame al 911 de inmediato. La persona no respira."
+      }
+    },
+    {
+      "id": "swelling",
+      "action": "call911",
+      "words": [
+        "throat is swelling",
+        "throat swelling",
+        "swelling",
+        "hincha la garganta",
+        "garganta hinchada",
+        "garganta"
+      ],
+      "message": {
+        "en": "Call 911 immediately. Airway swelling is life-threatening.",
+        "es": "Llame al 911 de inmediato. La hinchazón de garganta es muy peligrosa."
+      }
+    },
+    {
+      "id": "unresponsive",
+      "action": "call911",
+      "words": [
+        "wont wake up",
+        "won't wake up",
+        "no despierta",
+        "no se despierta",
+        "unconscious"
+      ],
+      "message": {
+        "en": "Call 911 immediately. Person is unresponsive.",
+        "es": "Llame al 911 de inmediato. La persona no responde."
+      }
+    },
+    {
+      "id": "choking",
+      "action": "call911",
+      "words": [
+        "choking",
+        "ahogando",
+        "se ahoga"
+      ],
+      "message": {
+        "en": "Call 911 immediately. Perform choking rescue steps.",
+        "es": "Llame al 911 de inmediato. Ayude a la persona que se ahoga."
+      }
+    },
+    {
+      "id": "fire",
+      "action": "call911",
+      "words": [
+        "fire in the",
+        "smoke in the",
+        "fuego en",
+        "humo en",
+        "hay fuego",
+        "fire",
+        "smoke"
+      ],
+      "message": {
+        "en": "Get out of the house immediately and call 911 from outside.",
+        "es": "Salgan de la casa de inmediato y llamen al 911 desde afuera."
+      }
+    },
+    {
+      "id": "flood-inside",
+      "action": "call911",
+      "words": [
+        "water is coming into the house",
+        "water coming into",
+        "agua entrando a la casa",
+        "agua entrando"
+      ],
+      "message": {
+        "en": "Move to higher ground immediately and call 911.",
+        "es": "Suban a un lugar alto de inmediato y llamen al 911."
+      }
+    },
+    {
+      "id": "poison",
+      "action": "callPoison",
+      "words": [
+        "swallowed pills",
+        "swallowed some pills",
+        "swallowed chemicals",
+        "swallowed",
+        "trago pastillas",
+        "trago unas pastillas",
+        "se trago"
+      ],
+      "message": {
+        "en": "Call Poison Control immediately at 1-800-222-1222.",
+        "es": "Llame a Control de Envenenamientos al 1-800-222-1222."
+      }
+    },
+    {
+      "id": "car-garage",
+      "action": "firmNo",
+      "words": [
+        "turn on the car in the garage",
+        "car in the garage to get warm",
+        "car in the garage to warm",
+        "run the car in the garage",
+        "car running in the garage",
+        "prender el carro en el garaje",
+        "carro prendido en el garaje",
+        "carro en el garaje para calentarnos"
+      ],
+
+      "message": {
+        "en": "NO. Car exhaust produces deadly carbon monoxide. Never run a car inside a garage.",
+        "es": "NO. El escape del carro produce monóxido de carbono mortal. Nunca prenda el carro en el garaje."
+      }
+    },
+    {
+      "id": "generator-inside",
+      "action": "firmNo",
+      "words": [
+        "generator in the",
+        "generator inside",
+        "generador adentro",
+        "run the generator"
+      ],
+      "message": {
+        "en": "NO. Generators must stay outdoors at least 20 feet away from windows.",
+        "es": "NO. Los generadores deben quedarse afuera, a más de 20 pies de ventanas."
+      }
+    },
+    {
+      "id": "oven-heat",
+      "action": "firmNo",
+      "words": [
+        "oven to heat",
+        "use the oven to",
+        "horno para calentar",
+        "usar el horno para"
+      ],
+      "message": {
+        "en": "NO. Never use an oven or stove to heat your home. It can cause fire or carbon monoxide poisoning.",
+        "es": "NO. Nunca use el horno o la estufa para calentar la casa. Puede causar incendio o envenenamiento."
+      }
+    },
+    {
+      "id": "grill-inside",
+      "action": "firmNo",
+      "words": [
+        "grill inside",
+        "bring the grill inside",
+        "parrilla adentro",
+        "meter la parrilla"
+      ],
+      "message": {
+        "en": "NO. Never bring an outdoor grill or charcoal inside. Deadly carbon monoxide will build up quickly.",
+        "es": "NO. Nunca meta una parrilla a la casa. El monóxido de carbono es mortal y se acumula rápido."
+      }
+    },
+    {
+      "id": "drive-water",
+      "action": "firmNo",
+      "words": [
+        "drive through the water",
+        "drive through water",
+        "manejar por el agua",
+        "cruzar el agua",
+        "water on it can we just drive",
+        "manejar por el agua en la calle"
+      ],
+      "message": {
+        "en": "NO. Turn Around, Don't Drown! Just 12 inches of water can float and sweep away a car.",
+        "es": "NO. ¡Dé la vuelta, no se ahogue! Solo 12 pulgadas de agua pueden arrastrar un vehículo."
+      }
+    }
+  ]
+}

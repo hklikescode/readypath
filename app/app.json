@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "ReadyPath TX",
+    "slug": "readypath-v2",
+    "scheme": "readypath",
+    "version": "2.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0E1A2B"
+    },
+    "android": {
+      "package": "com.readypath.tx",
+      "allowBackup": false,
+      "permissions": ["RECORD_AUDIO", "ACCESS_FINE_LOCATION", "ACCESS_COARSE_LOCATION"],
+      "adaptiveIcon": {
+        "backgroundColor": "#0E1A2B",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      }
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      ["expo-location", { "locationWhenInUsePermission": "ReadyPath uses your location only on this phone to warn you about low-water crossings." }],
+      ["expo-speech-recognition", {
+        "microphonePermission": "ReadyPath listens to your question on this phone. Nothing is sent to the internet.",
+        "speechRecognitionPermission": "ReadyPath turns your voice into words on this phone."
+      }]
+    ],
+    "experiments": { "typedRoutes": false }
+  }
+}
