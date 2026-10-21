@@ -64,7 +64,7 @@ export default function Grandparent() {
                 size={17}
                 style={{ paddingVertical: 10, paddingHorizontal: 16, minHeight: 48 }}
                 label={lang === 'es' ? 'Tornado' : 'Tornado'}
-                selected={activePlan?.id === 'tornado'}
+                selected={false}
                 color={COLORS.sky}
                 onPress={() => showPlan('tornado', 'Tornado Plan', 'Our in-home safe spot is the hall closet under the stairs. We take phone and shoes.')}
               />
@@ -73,7 +73,7 @@ export default function Grandparent() {
                 size={17}
                 style={{ paddingVertical: 10, paddingHorizontal: 16, minHeight: 48 }}
                 label={lang === 'es' ? 'Alimentos' : 'Food Bank'}
-                selected={activePlan?.id === 'food-bank'}
+                selected={false}
                 color={COLORS.mint}
                 onPress={() => showPlan('food-bank', 'Emergency Food Bank', 'Nearest emergency food bank is Hill Country Community Ministries at 1005 Lacy Dr.')}
               />
@@ -82,7 +82,7 @@ export default function Grandparent() {
                 size={17}
                 style={{ paddingVertical: 10, paddingHorizontal: 16, minHeight: 48 }}
                 label={lang === 'es' ? 'Huracán' : 'Hurricane'}
-                selected={activePlan?.id === 'hurricane'}
+                selected={false}
                 color={COLORS.grape}
                 onPress={() => showPlan('hurricane', 'Hurricane Evacuation Shelter', 'Nearest hurricane evacuation shelter is Kelly Reeves Complex at 10211 W Parmer Ln.')}
               />
@@ -91,7 +91,7 @@ export default function Grandparent() {
                 size={17}
                 style={{ paddingVertical: 10, paddingHorizontal: 16, minHeight: 48 }}
                 label={lang === 'es' ? 'Frío' : 'Freeze'}
-                selected={activePlan?.id === 'freeze'}
+                selected={false}
                 color={COLORS.sun}
                 onPress={() => showPlan('freeze', 'Freeze Plan', 'Warm room is living room. Water shut-off in garage.')}
               />
@@ -100,7 +100,7 @@ export default function Grandparent() {
                 size={17}
                 style={{ paddingVertical: 10, paddingHorizontal: 16, minHeight: 48 }}
                 label={lang === 'es' ? 'Apagón' : 'Power Out'}
-                selected={activePlan?.id === 'heat'}
+                selected={false}
                 color={COLORS.sun}
                 onPress={() => showPlan('heat', 'Power Outage', 'Flashlights in kitchen drawer left of stove.')}
               />
@@ -109,7 +109,7 @@ export default function Grandparent() {
                 size={17}
                 style={{ paddingVertical: 10, paddingHorizontal: 16, minHeight: 48 }}
                 label={lang === 'es' ? 'Inundación' : 'Flood Detour'}
-                selected={activePlan?.id === 'flood'}
+                selected={false}
                 color={COLORS.orange}
                 onPress={() => {
                   const flood = household.floodPlan ?? household.plan.find((e) => e.id === 'flood')?.text ?? household.routeB ?? null;

@@ -11,6 +11,7 @@ import { yay } from '../components/haptic';
 import { Section } from '../components/parent/Section';
 import { ContactsEditor, CrossingsEditor, HomeEditor, ModelPanel, PeopleEditor, PlanEditor } from '../components/parent/Editors';
 import { SheltersCard } from '../components/SheltersCard';
+import { PlanShare } from '../components/parent/PlanShare';
 import { t } from '../lib/strings';
 import { useApp } from '../lib/store';
 import { checklistRules } from '../lib/rules';
@@ -109,6 +110,7 @@ export default function Parent() {
       <Section delay={240} emoji="🏛️" title={t(lang, 'sheltersTitle')} open={open === 'shelters'} onToggle={() => toggle('shelters')}>
         <SheltersCard lang={lang} initialCategory="tornado" />
       </Section>
+      <Section delay={250} emoji="📤" title="Share with family" open={open === 'share'} onToggle={() => toggle('share')}><PlanShare /></Section>
       <Section delay={260} emoji="🧠" title={t(lang, 'pModel')} open={open === 'model'} onToggle={() => toggle('model')}><ModelPanel lang={lang} /></Section>
       <Section delay={290} emoji="🔍" title={t(lang, 'rulesTitle')} open={open === 'transparency'} onToggle={() => toggle('transparency')}>
         <BigButton emoji="🔍" label={t(lang, 'openRules')} color={COLORS.sky} height={56} fontSize={18} onPress={() => router.push('/rules' as never)} />

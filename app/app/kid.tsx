@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Keyboard, Linking, Modal, View } from 'react-native';
+import React, { useRef, useState } from 'react';
+import { ActivityIndicator, Keyboard, Linking, Modal, View } from 'react-native';
 import { useRouter } from 'expo-router';
 import { Screen, ScrollToHere } from '../components/Screen';
 import { BigButton } from '../components/BigButton';
@@ -57,13 +57,15 @@ export default function Kid() {
   const [text, setText] = useState('');
   const [answer, setAnswer] = useState<Answer>(null);
   const [busy, setBusy] = useState(false);
+  const busyRef = useRef(false); // state is stale on a fast double tap, so the ref is the real guard
   const [card, setCard] = useState<{ id?: string; title: string; text: string } | null>(null);
 
   const contacts = [...household.contacts].sort((a, b) => a.order - b.order).slice(0, 2);
 
   // Same pipeline and guardrails as the Ask screen: danger rules, plan notes only, AI with the age + language wrapper, number check.
   const ask = async (q: string) => {
-    if (busy) return;
+    if (busyRef.current) return;
+    busyRef.current = true;
     Keyboard.dismiss(); // the keyboard must not cover the answer
     setBusy(true);
     setAnswer(null);
@@ -91,6 +93,7 @@ export default function Kid() {
       addLog({ mode: 'kid', lang, question: q, outcome: r.outcome, entries: r.entries.map((e) => e.id), raw: r.raw?.slice(0, 400) });
       speak(r.text, lang);
     } finally {
+      busyRef.current = false;
       setBusy(false);
     }
   };
@@ -134,6 +137,13 @@ export default function Kid() {
               <Chip key={q} size={16} style={{ paddingVertical: 10, paddingHorizontal: 14 }} label={q} color={COLORS.navyCardLight} onPress={() => { setText(q); ask(q); }} />
             ))}
           </Row>
+          {busy && (
+            <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10, marginBottom: 12 }}>
+              <ActivityIndicator size="large" color="#6EE7B7" />
+              <Txt size={18} weight="medium" color="#F8FAFC">{t(lang, 'thinking')}</Txt>
+            </View>
+          )}
+          <ScrollToHere when={busy} />
           <ScrollToHere when={answer} />
           {answer?.kind === 'plan' && (
             <Card color="#15253C" borderColor={COLORS.mint} style={{ marginBottom: 12 }}>

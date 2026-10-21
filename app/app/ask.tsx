@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { ActivityIndicator, Keyboard, Linking, View } from 'react-native';
 import { useRouter } from 'expo-router';
 
@@ -55,6 +55,7 @@ export default function Ask() {
   const P = PALETTES[mode];
   const [text, setText] = useState('');
   const [busy, setBusy] = useState(false);
+  const busyRef = useRef(false); // state is stale on a fast double tap, so the ref is the real guard
   const [listening, setListening] = useState(false);
   const [voiceMsg, setVoiceMsg] = useState('');
   const [result, setResult] = useState<Result | null>(null);
@@ -97,7 +98,8 @@ export default function Ask() {
 
   // The order matters: 1) danger check  2) find plan entries  3) AI  4) block made-up numbers.
   async function handle(question: string) {
-    if (!question.trim() || busy) return;
+    if (!question.trim() || busyRef.current) return;
+    busyRef.current = true;
     Keyboard.dismiss(); // the keyboard must not cover the answer
     setBusy(true);
     setResult(null);
@@ -128,6 +130,7 @@ export default function Ask() {
       addLog({ mode, lang, question, outcome: r.outcome, entries: r.entries.map((e) => e.id), raw: r.raw?.slice(0, 400) });
       speak(r.text, lang);
     } finally {
+      busyRef.current = false;
       setBusy(false);
     }
   }
@@ -148,7 +151,7 @@ export default function Ask() {
       {voiceMsg ? <Txt size={16} color="#B3261E" style={{ marginBottom: 8 }}>{voiceMsg}</Txt> : null}
 
       <Field label={t(lang, 'typeHere')} value={text} onChangeText={setText} multiline style={{ fontSize: P.body - 4 }} />
-      <BigButton emoji="✨" label={t(lang, 'send')} color={COLORS.mint} fontSize={24} height={68} onPress={() => handle(text)} />
+      <BigButton emoji={busy ? '⏳' : '✨'} label={busy ? t(lang, 'thinking') : t(lang, 'send')} color={COLORS.mint} fontSize={24} height={68} disabled={busy} onPress={() => handle(text)} />
 
       {busy && (
         <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10, marginBottom: 12 }}>
@@ -156,6 +159,7 @@ export default function Ask() {
           <Txt size={P.body - 4} weight="medium">{t(lang, 'thinking')}</Txt>
         </View>
       )}
+      <ScrollToHere when={busy} />
       <ScrollToHere when={result} />
       {dangerNotBuilt && <NotBuilt label={t(lang, 'dangerBuiltLabel')} />}
       {checkNotBuilt && <NotBuilt label={t(lang, 'answerCheckLabel')} />}
