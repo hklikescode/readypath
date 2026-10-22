@@ -115,20 +115,17 @@ export default function Ask() {
         setResult({ kind: 'danger', rule: r.rule });
         addLog({ mode, lang, question, outcome: 'skipped-danger', ruleId: r.rule.id });
         warn();
-        speak(r.rule.message[lang], lang);
         return;
       }
       if (r.kind === 'noplan') {
         setResult({ kind: 'noplan' });
         addLog({ mode, lang, question, outcome: 'skipped-no-plan' });
-        speak(t(lang, 'planDoesntSay'), lang);
         return;
       }
       setCheckNotBuilt(r.checkNotBuilt);
       if (r.outcome === 'answered') yay();
       setResult({ kind: 'answer', text: r.text, from: r.from, outcome: r.outcome, systemPrompt: r.systemPrompt, planContext: r.planContext });
       addLog({ mode, lang, question, outcome: r.outcome, entries: r.entries.map((e) => e.id), raw: r.raw?.slice(0, 400) });
-      speak(r.text, lang);
     } finally {
       busyRef.current = false;
       setBusy(false);

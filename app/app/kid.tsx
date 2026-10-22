@@ -79,19 +79,16 @@ export default function Kid() {
         setAnswer({ kind: 'rule', rule: r.rule });
         addLog({ mode: 'kid', lang, question: q, outcome: 'skipped-danger', ruleId: r.rule.id });
         warn();
-        speak(r.rule.message[lang], lang);
         return;
       }
       if (r.kind === 'noplan') {
         setAnswer({ kind: 'none' });
         addLog({ mode: 'kid', lang, question: q, outcome: 'skipped-no-plan' });
-        speak(t(lang, 'notSure'), lang);
         return;
       }
       const first = r.entries[0];
       setAnswer({ kind: 'plan', title: pick(first.title, lang), text: r.text, id: first.id, outcome: r.outcome });
       addLog({ mode: 'kid', lang, question: q, outcome: r.outcome, entries: r.entries.map((e) => e.id), raw: r.raw?.slice(0, 400) });
-      speak(r.text, lang);
     } finally {
       busyRef.current = false;
       setBusy(false);
@@ -100,7 +97,6 @@ export default function Kid() {
 
   const openCard = (title: string, body: string, id?: string) => {
     setCard({ id, title, text: body });
-    speak(body, lang);
   };
 
   const planCard = (id: string, titleKey: 'powerOut') => {

@@ -118,7 +118,7 @@ export default function Emergency() {
           <BigButton emoji="🚨" label={t(lang, 'call911')} sub={t(lang, 'dialerOnly')} color={COLORS.tomato} textColor={COLORS.white}
             fontSize={P.btnText} height={P.btnH - 12} onPress={() => Linking.openURL('tel:911')} />
           <BigButton emoji="➡️" label={t(lang, 'emNext')} color="#1F5FD1" textColor={COLORS.white} fontSize={P.btnText} height={P.btnH - 12}
-            onPress={() => { setStepsSeen(true); speak(stepsText, lang); go911(); }} />
+            onPress={() => { setStepsSeen(true); go911(); }} />
         </>
       )}
 
@@ -144,7 +144,7 @@ export default function Emergency() {
             <BigButton emoji="📋" label={t(lang, 'seeSteps')} color={COLORS.sun} fontSize={22} height={64} onPress={() => setStep('steps')} />
           )}
           <BigButton emoji="📞" label={t(lang, 'emDone')} color={COLORS.mint} fontSize={P.btnText} height={P.btnH - 12} onPress={() => router.push('/family-call' as never)} />
-          <BigButton emoji="🏠" label={t(lang, 'doneReturn')} color="#162840" textColor="#F8FAFC" fontSize={18} height={54} onPress={() => router.back()} />
+          <BigButton emoji="🏠" label={t(lang, 'doneReturn')} color="#162840" textColor="#F8FAFC" fontSize={18} height={54} onPress={() => router.replace('/')} />
         </>
       )}
     </Screen>

@@ -91,7 +91,7 @@ export function Screen({ mode, children, show911, noBack, onBack, scroll = true 
             <Pressable
               accessibilityRole="button"
               accessibilityLabel={t(lang, 'navHome')}
-              onPress={() => { tap(); stopSpeaking(); router.push('/'); }}
+              onPress={() => { tap(); stopSpeaking(); router.replace('/'); }}
               style={({ pressed }) => [s.homeBtn, pressed && { transform: [{ scale: 0.94 }] }]}
             >
               <Txt size={14}>🏠</Txt>

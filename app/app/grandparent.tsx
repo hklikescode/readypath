@@ -30,7 +30,6 @@ export default function Grandparent() {
     const title = entry ? pick(entry.title, lang) : defaultTitle;
     const body = entry ? pick(entry.text, lang) : defaultText;
     setActivePlan({ id, title, text: body });
-    speak(body, lang);
   };
 
   return (

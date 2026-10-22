@@ -48,7 +48,6 @@ export default function Drive() {
       setBanner(c);
       setRouteB(false);
       warn();
-      speak(t(lang, 'drWarn', { label: c.label }), lang);
     }
   }, [lang]);
 
@@ -202,7 +201,7 @@ export default function Drive() {
           <View style={{ backgroundColor: COLORS.orange, borderWidth: 1.5, borderColor: 'rgba(255, 255, 255, 0.3)', borderRadius: 20, padding: 16, marginBottom: 14 }}>
             <Txt size={P.body + 2} weight="bold" color="#FFFFFF">⚠️ {t(lang, 'drWarn', { label: banner.label })}</Txt>
             <SpeakButton text={t(lang, 'drWarn', { label: banner.label })} lang={lang} color={COLORS.white} />
-            <BigButton emoji="↩️" label={t(lang, 'drRouteB')} color={COLORS.white} fontSize={P.btnText - 4} height={P.btnH - 16} onPress={() => { setRouteB(true); speak(routeBText, lang); }} style={{ marginBottom: 0, marginTop: 8 }} />
+            <BigButton emoji="↩️" label={t(lang, 'drRouteB')} color={COLORS.white} fontSize={P.btnText - 4} height={P.btnH - 16} onPress={() => { setRouteB(true); }} style={{ marginBottom: 0, marginTop: 8 }} />
           </View>
         </MotiView>
       )}

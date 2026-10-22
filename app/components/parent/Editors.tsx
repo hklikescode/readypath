@@ -69,7 +69,7 @@ function PersonForm({ p, lang, patch, remove, focusBackup, onFixed }: { p: Perso
       </Row>
       <Field label={t(lang, 'pAllergies')} value={p.allergies ?? ''} onChangeText={(allergies) => patch({ allergies })} />
       <Field label={t(lang, 'pAllergyStepsEn')} multiline value={p.allergySteps?.en ?? ''} onChangeText={(en) => patch({ allergySteps: { en, es: p.allergySteps?.es } })} />
-      <Field label={t(lang, 'pAllergyStepsEs')} multiline value={p.allergySteps?.es ?? ''} onChangeText={(es) => patch({ allergySteps: { en: p.allergySteps?.en ?? '', es } })} />
+      <Field label={`${t(lang, 'pAllergyStepsEs')} (Grandparent flow)`} multiline value={p.allergySteps?.es ?? ''} onChangeText={(es) => patch({ allergySteps: { en: p.allergySteps?.en ?? '', es } })} />
       <Field label={t(lang, 'pPowerDevices')} value={devices} onChangeText={(v) => { setDevices(v); patch({ powerDevices: v.split(',').map((x) => x.trim()).filter(Boolean) }); }} />
       {suggest ? (
         <View style={{ marginBottom: 8 }}>
@@ -302,10 +302,8 @@ export function PlanEditor({ household, update, lang }: P) {
                   ))}
                 </ScrollView>
 
-                <Field label={t(lang, 'pTitleEn')} value={e.title.en} onChangeText={(en) => patch(e.id, { title: { ...e.title, en } })} />
-                <Field label={t(lang, 'pTitleEs')} value={e.title.es ?? ''} onChangeText={(es) => patch(e.id, { title: { ...e.title, es } })} />
-                <Field label={t(lang, 'pTextEn')} multiline value={e.text.en} onChangeText={(en) => patch(e.id, { text: { ...e.text, en } })} />
-                <Field label={t(lang, 'pTextEs')} multiline value={e.text.es ?? ''} onChangeText={(es) => patch(e.id, { text: { ...e.text, es } })} />
+                <Field label={t(lang, 'pPlanTitle')} value={e.title.en} onChangeText={(en) => patch(e.id, { title: { ...e.title, en } })} />
+                <Field label={t(lang, 'pPlanText')} multiline value={e.text.en} onChangeText={(en) => patch(e.id, { text: { ...e.text, en } })} />
                 <KeywordField entry={e} lang={lang} onChange={(keywords) => patch(e.id, { keywords })} />
 
                 <Row style={{ gap: 8, marginTop: 8 }}>
@@ -577,10 +575,8 @@ export function CrossingsEditor({ household, update, lang }: P) {
       </Row>
 
       {/* Route B Instructions */}
-      <Field label={`${t(lang, 'pRouteBEn')} — Spoken Evacuation Detour`} multiline value={household.routeB?.en ?? ''}
-        onChangeText={(en) => update((h) => ({ ...h, routeB: { en, es: h.routeB?.es } }))} />
-      <Field label={`${t(lang, 'pRouteBEs')} — Instrucciones habladas`} multiline value={household.routeB?.es ?? ''}
-        onChangeText={(es) => update((h) => ({ ...h, routeB: { en: h.routeB?.en ?? '', es } }))} />
+      <Field label={t(lang, 'pRouteBInstructions')} multiline value={pick(household.routeB, lang)}
+        onChangeText={(val) => update((h) => ({ ...h, routeB: { en: val, es: household.routeB?.es } }))} />
     </View>
   );
 }

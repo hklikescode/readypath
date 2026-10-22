@@ -85,14 +85,14 @@ export default function FamilyCall() {
           <BigButton emoji="🚨" label={t(lang, 'call911')} color={COLORS.tomato} textColor={COLORS.white} fontSize={P.btnText} height={P.btnH} onPress={() => Linking.openURL('tel:911')} />
           <BigButton emoji="☎️" label={t(lang, 'call211')} color={COLORS.sky} fontSize={P.btnText - 4} height={P.btnH - 16} delay={90} onPress={() => Linking.openURL('tel:211')} />
           <BigButton emoji="🔁" label={t(lang, 'fcStartOver')} color={COLORS.white} fontSize={20} height={60} delay={160} onPress={startOver} />
-          <BigButton emoji="🏠" label={t(lang, 'doneReturn')} color="#162840" textColor="#F8FAFC" fontSize={18} height={54} onPress={() => router.back()} />
+          <BigButton emoji="🏠" label={t(lang, 'doneReturn')} color="#162840" textColor="#F8FAFC" fontSize={18} height={54} onPress={() => router.replace('/')} />
         </>
       )}
 
       {reached && (
         <>
           <BigButton emoji="🔁" label={t(lang, 'fcStartOver')} color={COLORS.white} fontSize={20} height={60} onPress={startOver} />
-          <BigButton emoji="🏠" label={t(lang, 'doneReturn')} color={COLORS.mint} textColor="#0F172A" fontSize={18} height={54} onPress={() => router.back()} />
+          <BigButton emoji="🏠" label={t(lang, 'doneReturn')} color={COLORS.mint} textColor="#0F172A" fontSize={18} height={54} onPress={() => router.replace('/')} />
         </>
       )}
     </Screen>
